@@ -1,7 +1,9 @@
+/*Estilos  genericos*/
 *{
     margin: 0;
     padding: 0;
 }
+/*Estilos de etiquetas semanticas */
 header{
     background-color: #ea1b1b;
     margin:5px;
@@ -12,82 +14,96 @@ p{
     font-size:20px;
 }
 main{
-    margin: 5px;
+    width: 80%;
+    margin: auto;
 }
 section{
     padding: 20px;
 }
 h2{
+   padding: 30px;
    background-color: aliceblue;
    font-size:2em;
    text-align: center;
    font-weight: normal;
 }
 article{
+    padding: 100px;
+    text-align: center;
+    background: #ea1b1b;
+    margin-bottom: 20px;
+    height: 30px;/*Le tuve que poner el mismo alto a todo porque sino la caja de mapa de hospitales que quedaba mas alto porque por defoult tienen el alto del contenido */
+    box-sizing: border-box
     
 }
 footer{
-   border: 2px solid;
+    padding: 60px;
     margin:5px;
     border-radius: 15px;
 }
-.slaider{
-   background-color:#ea1b1b;
-   height: 200px; 
-   margin: auto;
-   text-align: center; 
-   border-radius: 15px;
-margin-top: 10px;
-}
 
-.contenedor{
-   display: flex;
-   justify-content: center;
-    border-radius: 15px;
-}
-.columna{
-    display: inline-flex;
-    background-color: #ea1b1b;
-    justify-content: center;
-    height: 150px;
-    width: 150px;
-    margin-left: 20px;
-    margin-right: 20px;
-    padding: 40px;
-    border-radius: 50%;
-}
 
-.contenedor1{
+/*Estilos de clase*/
+
+.contenedorheader{
     display: flex;
     justify-content: space-between;
     height: 100px;
     align-items: center;
 }
-.contenedor2{
-    display: flex;
-    justify-content: center;
-    background-color:#ea1b1b;
-    height: 100px;
-    border-radius: 15px;
+
+.contenedorslaider{
+   display:block;
+   height: 200px; /*Aca tuve que darle alto, pero no es lo correcto me parece*/
+   text-align: center; 
 }
-.contenedor3{
+
+/*Linea con tres columnas que informa Enfermedades, Hospitales y Vacunas*/
+/*Cuando reduzco la pantalla se ve que  las tres columnas sobrepasan los limites del main*/
+.contenedor{
+   display: flex;
+   flex-direction: row; /* no es necesario ponerlo es la opcion por de defoult*/
+   justify-content:space-around;
+   align-items:flex-start;
+   flex-wrap: nowrap; /*redestribuye los elementos para que entren en una sola linea tmb es por defoult*/
+}
+.contenedorllamado{
+    display: flex;
+    justify-content:space-around;
+    background-color:#ea1b1b;
+
+}
+
+.contenedorfooter{
     display: flex;
     justify-content: space-between;
     background-color:#ea1b1b;
-    border: 2px solid;
     margin-top: 10px;
 
 }
-.columafooter{
-    display: inline-flex;
-    justify-content: center;
-    background-color: #fff;
-    height: 70px;
-    width: 120px;
-    padding: 40px;
-    border-radius: 15px;
-    margin-left: 20px;
-    margin-right: 20px;
 
 
+/*menu del index, que se replicara en todas las paginas*/
+.menu{
+     background-color: #ea1b1b;
+     border-radius: 15px;
+     margin:5px;
 }
+.menu ul{ /* el ul funcionaria como contenedor*/
+    display: flex;
+    justify-content: center;
+}
+.menu li{
+    list-style: none; /* pasa sacar los puntos de los li*/
+}
+.menu a{
+    text-decoration: none; /*saca el subrayado*/
+    color:#fff;
+    padding: 20px;
+    display: block; /*hace que los a se comporten como un bloque, para que se les aplique el padding*/
+}
+.menu a:hover{
+    background-color: #fff;
+    color: #000;
+}
+/*Estilos de id*/

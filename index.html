@@ -6,9 +6,13 @@
     <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
-   <header class="contenedor1">
-    <img class="logo" src="img/local_hospital-24px.svg" alt=""> <!--logo de la pagina-->
-    <form class="buscadorheader" action="#" method="post" >
+   <header class="contenedorheader">
+    <div clas="logo">
+       <img src="img/local_hospital-24px.svg" alt=""> <!--logo de la pagina--> 
+    </div>
+    <div class="buscador">
+        <!--html del buscador-->
+         <form  action="#" method="post" >
         <datalist id="buscador">/!--no se como dejar una opcion marcada por defecto--/
         <option value="sida">
         <option value="Resdriado común">
@@ -21,9 +25,28 @@
         <input type="text" name="enfermedades" list="buscador" placeholder="Busque por enfermedades">
         <input type="submit" value="buscar">
     </form> <!--un datalist para busqueda-->   
+    </div>
+   <div class="redessociales">
+        <!--La idea sería colocar iconos para linkear con las redes sociales-->
+         <p>Redes Sociales</p>   
+         <img src="" alt=""> <!--icono de red social-->
+         <img src="" alt=""> <!--icono de red social-->
+         <img src="" alt=""> <!--icono de red social-->
+        </div>
    </header>
+   <!--html del menu-->
+   <nav class="menu">
+      <ul>
+           <li><a href="#">HOME</a></li>
+           <li><a href="#">ENFERMEDADES</a></li>
+           <li><a href="#">HOSPITALES</a></li>
+           <li><a href="#">VACUNACI&Oacute;N</a></li>
+           <li><a href="#">CONTACTO</a></li>
+     </ul>
+       
+   </nav>
     <main>
-        <section class="slaider">
+        <section class="contenedorslaider">
             <article>
             <p>Slaider</p>   
                 <!--con el contenido del slaider-->
@@ -32,40 +55,37 @@
         <h2>Titulo de la pagina</h2> <!--Titulo de la página-->
         
         <section class="contenedor">
-               <article class="columna">
+               <article class="item1">
                 <p>Enfermedades</p>
                 <!--Enfermedades-->
                </article>
-            
-           
-               <article class="columna">
+               <article class="item2">
                 <p>Vacunas</p>
                 <!--Vacunas-->
                </article>  
-              
-                
-                <article class="columna">
+               <article class="item3">
                 <p>Mapa de hospitales</p>
                 <!--mapa de hospitales-->
                 </article>
-              
-             
-        </section >
+         </section >
            
-            
-        <section class="contenedor2">
-            <article >
+        <!--contendeor para el llamado al 148 es especifico solo del home, deberiamos de sacarlo despues para dejar aca solo lo generico en todas las páginas-->   
+        <section class="contenedorllamado">
+            <article class="item4">
+            <p>Si ten&eacute;s s&iacute;ntomas de COVID-19 LLAM&Aacute; AL</p>    
+            </article>
+            <article class="item5" >
             <p>Llana al 148</p>   
             <!--llama al 148-->
             </article>
         </section>
         
     </main>
-    <footer class="contenedor3">
-        <div class="columafooter">
+    <footer class="contenedorfooter">
+        <div class="item6">
          <p>Datos del alumno</p>   
         </div>
-        <div class="columafooter">
+        <div class="item7">
         <p>Menu inferior:</p> 
         <p>
         <a href="">Enfermedades</a>
@@ -75,12 +95,7 @@
         </p>
         
         </div >
-        <div class="columafooter">
-         <p>Redes Sociales</p>   
-         <img src="" alt=""> <!---icono de red social-->
-         <img src="" alt=""> <!---icono de red social-->
-         <img src="" alt=""> <!---icono de red social-->
-        </div>
+        
     </footer>
 </body>
 </html>
