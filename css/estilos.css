@@ -1,108 +1,154 @@
-/*Estilos  genericos*/
+@import '../fonts/fuentes.css';
+@import 'all.css';
+
 *{
     margin: 0;
     padding: 0;
 }
-/*Estilos de etiquetas semanticas */
+/*estilos de etiqueta*/
 header{
-    background-color: #ea1b1b;
-    margin:5px;
-    border-radius: 15px;
+    background-image: url(../img/full-bloom.png);
 }
-p{
-    font-family: arial, sans-serif;
-    font-size:20px;
-}
-main{
-    width: 80%;
-    margin: auto;
-}
-section{
-    padding: 20px;
+h1{
+    text-align: center;
+    padding: 10px;
 }
 h2{
-   padding: 30px;
-   background-color: aliceblue;
-   font-size:2em;
-   text-align: center;
-   font-weight: normal;
-}
-article{
-    padding: 100px;
-    text-align: center;
-    background: #ea1b1b;
-    margin-bottom: 20px;
-    height: 30px;/*Le tuve que poner el mismo alto a todo porque sino la caja de mapa de hospitales que quedaba mas alto porque por defoult tienen el alto del contenido */
-    box-sizing: border-box
-    
+    padding: 10px;
 }
 footer{
-    padding: 60px;
-    margin:5px;
-    border-radius: 15px;
+    background-image: url(../img/green_dust_scratch.png);
+}
+p{
+    padding: 5px;
+}
+
+main{
+    margin: auto;
+    width: 90%;
 }
 
 
-/*Estilos de clase*/
+/*estilos de clase*/
+.estilosheader{
+    display: flex;
+    justify-content: space-around;
+    align-items: center; /*para centrar los items del contenedor*/
+}
+.estilosheader img{
+   width: calc(50% - 10px);
+   box-sizing: border-box;
+   padding: 20px;
+    
+}
+.estilosheader form{
+    width: 40%;
+    box-sizing: border-box;
+    padding: 50px;
+    margin: 5px;
+}
+.menu{
+    display: flex;
+    justify-content:space-around;
+    border-bottom: 5px solid #000;
+}
 
-.contenedorheader{
+.menu li{
+    list-style: none;
+}
+.menu a{
+    text-decoration: none;
+    margin: 10px;
+    display: block;
+    padding: 10px;
+}
+.menu a:hover{
+    background-color: #efe728;
+    border-radius: 20px;
+}
+.estilosfooter{
     display: flex;
     justify-content: space-between;
-    height: 100px;
+}
+.menuinferior{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.menuinferior {
+    list-style: none;
+}
+.menuinferior a{
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+}
+.buscadordeenfermedades{
+    text-align: center;
+}
+.contenedorlistaenfermedades{
+    display: flex;
+    flex-direction: column;
+}
+.contenedorlistaenfermedades article{
+    display: flex;
+    border: 2px solid #000;
+    background-color: #8ef0da;
+    margin: 20px;
+}
+.contenedorenfermedad{
+    display: flex;
+    justify-content: space-between;
     align-items: center;
 }
-
-.contenedorslaider{
-   display:block;
-   height: 200px; /*Aca tuve que darle alto, pero no es lo correcto me parece*/
-   text-align: center; 
+.contenedorenfermedad img{
+    height: 100px;
+}
+.contenedorenfermedad div{
+    width: calc (50% - 10px);
+    margin: 10px;
 }
 
-/*Linea con tres columnas que informa Enfermedades, Hospitales y Vacunas*/
-/*Cuando reduzco la pantalla se ve que  las tres columnas sobrepasan los limites del main*/
-.contenedor{
-   display: flex;
-   flex-direction: row; /* no es necesario ponerlo es la opcion por de defoult*/
-   justify-content:space-around;
-   align-items:flex-start;
-   flex-wrap: nowrap; /*redestribuye los elementos para que entren en una sola linea tmb es por defoult*/
+.contenedorlistaenfermedades section{
+    margin: 20px;
+}
+.contenedormain{
+    display: flex;
+    flex-direction: column;
+}
+.contenedormain article {
+    padding: 30px;
+    margin: 10px;
+}
+.contenedorslaider {
+    display: block;
+    text-align: center;
+    background-color: #5cafe3;
+    height: 200px;
+    padding: 20px;
+    
+}
+.contenedorslaider img{
+    width: 350px;
+}
+.contenedormenucentral{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+}
+.contenedormenucentral div{
+    border-radius: 50%;
+}
+
+/*no se porque no lo esta tomando*/
+.contenedorredessociales{
+    display: flex;
+    justify-content: space-between;
 }
 .contenedorllamado{
     display: flex;
-    justify-content:space-around;
-    background-color:#ea1b1b;
-
-}
-
-.contenedorfooter{
-    display: flex;
     justify-content: space-between;
-    background-color:#ea1b1b;
-    margin-top: 10px;
-
-    
+    height: 200px;
+    background-color: #31e0cc;
+    align-items: center;
 }
-/*menu del index, que se replicara en todas las paginas*/
-.menu{
-     background-color: #ea1b1b;
-     border-radius: 15px;
-     margin:5px;
-}
-.menu ul{ /* el ul funcionaria como contenedor*/
-    display: flex;
-    justify-content: center;
-}
-.menu li{
-    list-style: none; /* pasa sacar los puntos de los li*/
-}
-.menu a{
-    text-decoration: none; /*saca el subrayado*/
-    color:#fff;
-    padding: 20px;
-    display: block; /*hace que los a se comporten como un bloque, para que se les aplique el padding*/
-}
-.menu a:hover{
-    background-color: #fff;
-    color: #000;
-}
-/*Estilos de id*/
