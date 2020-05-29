@@ -96,26 +96,25 @@ h3{
 .contenedorllamado{
     display: flex;
     justify-content:space-around;
-    background-color:#ea1b1b;
+    background-color:#1bc1ea;
 
 }
 
 .contenedorfooter{
     display: flex;
     justify-content: space-between;
-    background-color:#ea1b1b;
+    background-color:#1bc1ea;
     margin-top: 10px;
 
     
 }
 /*menu del index, que se replicara en todas las paginas*/
 .menu{
-     background-color: #ea1b1b;
+     background-color: #1bc1ea;
      border-radius: 15px;
      margin:5px;
-}
-.menu ul{ /* el ul funcionaria como contenedor*/
-    display: flex;
+    }
+    .menu ul{ /* el ul funcionaria como contenedor*/    display: flex;
     justify-content: center;
 }
 .menu li{
