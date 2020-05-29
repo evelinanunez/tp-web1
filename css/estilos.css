@@ -5,9 +5,7 @@
 }
 /*Estilos de etiquetas semanticas */
 header{
-    background-color: #ea1b1b;
-    margin:5px;
-    border-radius: 15px;
+    background-image: url(../img/full-bloom.png);
 }
 p{
     font-family: arial, sans-serif;
@@ -30,7 +28,7 @@ h2{
 article{
     padding: 100px;
     text-align: center;
-    background: #ea1b1b;
+    background: #1bc1ea;
     margin-bottom: 20px;
     height: 30px;/*Le tuve que poner el mismo alto a todo porque sino la caja de mapa de hospitales que quedaba mas alto porque por defoult tienen el alto del contenido */
     box-sizing: border-box
@@ -42,14 +40,42 @@ footer{
     border-radius: 15px;
 }
 
+h3{
+    padding: 9px;
+    background-color: aliceblue;
+    font-size: x-large;;
+    text-align: center;
+    font-weight: normal;
+ }
+ h4{
+    padding: 30px;
+    font-size: x-large;
+    text-align: center;
+    font-weight: normal;
+ }
+
+ h1 {
+     text-align: center;
+ }
+
 
 /*Estilos de clase*/
-
-.contenedorheader{
+.estilosheader{
     display: flex;
-    justify-content: space-between;
-    height: 100px;
-    align-items: center;
+    justify-content: space-around;
+    align-items: center; /*para centrar los items del contenedor*/
+}
+.estilosheader img{
+   width: calc(50% - 10px);
+   box-sizing: border-box;
+   padding: 20px;
+    
+}
+.estilosheader form{
+    width: 40%;
+    box-sizing: border-box;
+    padding: 50px;
+    margin: 5px;
 }
 
 .contenedorslaider{
@@ -104,5 +130,97 @@ footer{
 .menu a:hover{
     background-color: #fff;
     color: #000;
+}
+
+.imagenCoronavirus {
+    height: 100%;
+    width: 100%;
+}
+
+.containerCoronavirus {
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.containerImgCoronavirus {
+    flex: 0.45;
+}
+
+.containerDescripcion{
+    flex: 0.5;
+}
+
+.descripcionCoronavirus{   
+    font-family: arial, sans-serif;
+    font-size: 13px;
+    line-height: 20px;
+}
+
+.containerTest{
+    display: flex;
+    justify-content: space-between;
+}
+
+.containerDescripcionTest{
+    display: flex;
+    flex-direction: row;
+    flex:0.5;
+}
+
+.descripcionTest{
+    font-family: arial, sans-serif;
+    font-size: 17px;
+    line-height: 24px;
+    text-align: justify;
+}
+.containerFormularioTest{
+    display:flex;
+    flex: 0.45;
+}
+
+.itemsFormulario {
+    font-family: arial, sans-serif;
+    font-size: 17px;
+    line-height: 24px;
+    text-align: justify;
+}
+
+.contenedorSintomasHabituales{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.descripcionSintoma {
+    text-align: center;
+    font-family: arial, sans-serif;
+    font-size: medium;
+}
+
+.imagenSintoma{
+    height: 130px;
+    width: 130px;
+}
+
+.descripcionSintomaFinal{
+    text-align: center;
+    font-family: arial, sans-serif;
+    font-size: large;
+
+}
+
+.subtitulos{
+    text-align: center;
+    font-family: arial, sans-serif;
+    font-size: xx-large;
+}
+
+.contenedorDescripcionFinalSintomas{
+    border-color: black;
+    border: outset;
+}
+.imagenPrevencionCovid{
+    height: 400px;
+    justify-content: center;
 }
 /*Estilos de id*/
