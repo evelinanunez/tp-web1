@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Covid-19</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/enfermedadEstilos.css">
+</head>
+<body>
+     <header class="estilosheader">
+        <div >
+        <img  src="img/EVELIJUL.png" alt="" class="imagenlogo">
+         </div >
+        <div>
+        <form   action="#" method="post" >
+        <datalist id="buscador"><!--no se como dejar una opcion marcada por defecto-->
+        <option value="sida">
+        <option value="Resfriado común">
+        <option value="Fiebre hemorrágica por el virus del Ébola">
+        <option value="Herpes genital">
+        <option value="Influenza">
+        <option value="Sarampión">
+        <option value="Varicela y herpes zóster (culebrilla)">
+        <option value="COVID-19">
+        </datalist>
+        <input type="text" name="enfermedades" list="buscador" placeholder="Busque por enfermedades" class="buscador">
+        <!--input type="submit" value="buscar" class="btnbuscar"-->
+        <button class="buttonbuscar">Buscar<i class="fas fa-search"></i></button><!--El button me deja poner lo que yo quiera dentro de él-->
+       </form> 
+       </div>
+    </header>
+     <nav >
+            <ul class="menu">
+                <li><a href="index.html" target="_blank">Home</a></li>
+                <li><a href="">Enfermedades</a></li>
+                <li><a href="">Vacunación</a></li>
+                <li><a href="">Hospitales</a></li>
+                <li><a href="">Contacto</a></li>
+            </ul>
+    </nav>
+    <main >
+        <h3 class="titulosCovid" >COVID- 19</h3>
+        <section class="containerCoronavirus">
+            <article class="containerImgCoronavirus">
+                <img class="imagenCoronavirus" src="img/covid19.jpg">
+            </article>
+            <article class="containerDescripcion">
+                <p class="descripcionCoronavirus">Los coronavirus (CoV) son una amplia familia de virus que pueden
+                    causar diversas afecciones, desde el
+                    resfriado común hasta enfermedades más graves, como ocurre con el coronavirus causante del síndrome
+                    respiratorio de Oriente Medio (MERS-CoV) y el que ocasiona el síndrome respiratorio agudo severo
+                    (SRAS-CoV). Un nuevo coronavirus es una nueva cepa de coronavirus que no se había encontrado antes
+                    en el
+                    ser humano.
+                    Los coronavirus se pueden contagiar de los animales a las personas (transmisión zoonótica). De
+                    acuerdo
+                    con estudios exhaustivos al respecto, sabemos que el SRAS-CoV se transmitió de la civeta al ser
+                    humano y
+                    que se ha producido transmisión del MERS-CoV del dromedario al ser humano. Además, se sabe que hay
+                    otros
+                    coronavirus circulando entre animales, que todavía no han infectado al ser humano.
+                    Esas infecciones suelen cursar con fiebre y síntomas respiratorios (tos y disnea o dificultad para
+                    respirar). En los casos más graves, pueden causar neumonía, síndrome respiratorio agudo severo,
+                    insuficiencia renal e, incluso, la muerte.
+                    Las recomendaciones habituales para no propagar la infección son la buena higiene de manos y
+                    respiratoria (cubrirse la boca y la nariz al toser y estornudar) y la cocción completa de la carne y
+                    los
+                    huevos. Asimismo, se debe evitar el contacto estrecho con cualquier persona que presente signos de
+                    afección respiratoria, como tos o estornudos.
+                </p>
+            </article>
+        </section>
+
+        <h3 class="titulosCovid" >Formulario de detección (test) de Coronavirus (COVID19)</h3>
+        <section class="containerTest">
+            <article class="containerDescripcionTest">
+                <p class="descripcionTest">“Hola usuario! Si tienes síntomas de XXXX o has estado en contacto con una persona afectada deberías
+                    hacer un control y seguimiento diario de tus síntomas.
+                    Esta aplicación te permitirá hacer un seguimiento de la evolución de los síntomas y te dará las
+                    indicaciones y consejos a seguir en cada caso. El uso de este servicio supone la aceptación de los
+                    términos y la política de privacidad descritos en 'Ver las condiciones y políticas'”
+                </p>         
+            </article>
+            <article class="containerFormularioTest">
+                <form action="#" method="get" enctype="application/x-www-form-urlencoded">
+                    <label for="nombre" class="itemsFormulario">Nombre y Apellido:</label>
+                    <input type="text" id="nombre" name="nombre" required placeholder="Ingrese su nombre">
+                    <br><br>
+                    <label for="dni" class="itemsFormulario">DNI</label>
+                    <input type="number" id="documentoNro" name="correo" required placeholder="ingrese su documento">
+                    <label for="tel" class="itemsFormulario">Teléfono</label>
+                    <input type="tel" id="tel" name="telefono" required placeholder="ingrese su telefono">
+                    <br><br>
+                    <label for="consultaViaje" class="itemsFormulario">¿Has viajado al exterior de la República Argentina?</label>
+                    <label for="si" class="itemsFormulario">Si  </label><input type="radio" name="viajo" checked>
+                    <label for="no" class="itemsFormulario" >No  </label><input type="radio" name="viajo" checked>
+                    <br>
+                    <label for="paises" class="itemsFormulario">Paises:</label>
+                    <input list="paises" name="pais" id="pais">
+                    <datalist id="paises">
+                    <option value="Pais de Norteamérica">
+                    <option value="Pais de Sudamérica">
+                    <option value="País de Europa">
+                    <option value="País de África">
+                    <option value="País de Asia">
+                    <option value="Otro">
+                    </datalist>
+                    <br><br>
+                    <label for="ciudades" class="itemsFormulario">Ciudad:</label>
+                    <input list="ciudades" name="ciudad" id="ciudad">
+                    <datalist id="ciudades">
+                    <option value="Ciudad de Buenos Aires">
+                    <option value="Zona Oeste">
+                    <option value="Zona Norte">
+                    <option value="Zona Sur">
+                    <option value="Zona Este">
+                    <option value="Otro">
+                    </datalist>
+                    <label for="consultaSexo" class="itemsFormulario" >Sexo</label>
+                    <label for="femenino">F  </label><input type="radio" name="sexo" checked>
+                    <label for="masculino">M  </label><input type="radio" name="sexo" checked>
+                    <br><br>
+                    <label for="" class="itemsFormulario" > Por Favor, indique los síntomas que representas: </label>
+                    <br><br>
+                    <label for="" class="itemsFormulario" >¿Tuviste fiebre mayor a 38 grados?:</label>
+                    Si <input type="radio" name="fiebre"> No <input type="radio" name="fiebre" checked>
+                    <br><br>
+                    <label for="" class="itemsFormulario" >¿Tuviste dolor de cabeza?:</label>
+                    Si <input type="radio" name="dolorCabeza" > No <input type="radio" name="dolorCabeza" checked>
+                    <br><br>
+                    <label for=""class="itemsFormulario" >¿Tuviste una tos persistente?:</label>
+                    Si <input type="radio" name="tosPersistente" > No <input type="radio" name="tosPersistente"checked>
+                    <br><br>
+                    <label for="" class="itemsFormulario" >¿Tuviste dolor de garganta?:</label>
+                    Si <input type="radio" name="dolorGarganta" > No <input type="radio" name="dolorGarganta" checked>
+                    <br><br>
+                    <label for="" class="itemsFormulario" >¿Tuviste dificulad para respirar?:</label>
+                    Si <input type="radio" name="dificultadRespirar" > No <input type="radio" name="dificultadRespirar" checked>
+                    <br><br>
+                    <label for="dni" class="itemsFormulario" >Direccion</label>
+                    <input type="dni" id="direccion" name="direccion" required placeholder="ingrese una direccion">
+                    <label for="ciudades" class="itemsFormulario">Ciudad:</label>
+                    <input list="ciudades" name="ciudad" id="ciudad">
+                    <datalist id="ciudades">
+                    <option value="Ciudad de Buenos Aires">
+                    <option value="Zona Oeste">
+                    <option value="Zona Norte">
+                    <option value="Zona Sur">
+                    <option value="Zona Este">
+                    <option value="Otro">
+                    </datalist>
+                    <br><br>
+                    <input type="reset" value="Enviar Test">
+                </form>
+            </article>
+        </section>
+        <h3 class="titulosCovid">Información importante del COVID - 19</h3>
+        <h4 class="subtitulosCovid"> Síntomas mas habituales:</h4>
+        <div class="contenedorSintomasHabituales">
+            <div class="Sintoma1">
+             <img src="img/fiebre.gif" alt="sintoma de fiebre" class="imagenSintoma">
+            <h1 class="descripcionSintoma">Fiebre</h1>
+            </div>
+            <div class="Sintoma2" >
+             <img src="img/tos.gif" alt="tos" class="imagenSintoma">
+             <h1 class="descripcionSintoma">Tos</h1>
+            </div>  
+            <div class="Sintoma3" >
+              <img src="img/cansancio.gif" alt="sintoma Cansancio" class="imagenSintoma">
+              <h1 class="descripcionSintoma">Cansancio</h1>
+            </div>
+        </div>
+        <div class="contenedorDescripcionFinalSintomas">
+        <h1 class="descripcionSintomaFinal">Si tenés fiebre junto con tos, dolor de garganta o dificultad para respirar, o si presentás pérdida brusca del olfato y del gusto, consultá telefónicamente al sistema de salud de tu localidad.</h1>
+        </div>
+        <h4 class="subtitulosCovid"> Recomendaciones de prevencion:</h4>
+        <section class="imagenCovid">
+            <img src="img/prevencionCovid19.jpeg" alt="prevencion" class="imagenPrevencionCovid">
+        </section>
+        <h3 class="titulosCovid">Mapa con el hospital mas cercano:</h3>
+        <article class="mapa">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6564.4935495182735!2d-58.57110652222283!3d-34.64847024736383!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x83d47398513db9ef!2sHospital%20Eva%20Peron%20Ramos!5e0!3m2!1ses!2sar!4v1590946733971!5m2!1ses!2sar" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+         </article>
+
+    </main>
+    <footer class="estilosfooter">
+        <div>
+         <h3>Datos del grupo</h3> 
+         <ul>
+             <li>
+                 <p>Delfino, Julieta Luc&iacute;a DNI 38.939.695</p>
+             </li>
+             <li>
+                 <p>&ntilde;uñez, Evelina Celeste DNI 34.986.785</p>
+             </li>
+         </ul>
+        </div>
+        <div>
+        <h3>Menu inferior</h3>
+         <ul class="menuinferior">
+                <li><a href="">Enfermedades</a></li>
+                <li><a href="">Vacunación</a></li>
+                <li><a href="">Hospitales</a></li>
+                <li><a href="">Contacto</a></li>
+         </ul>      
+        </div>
+        <div >
+        <h3>Redes sociales</h3>
+         <div class="contenedorredessociales">
+         <div><i class="fab fa-facebook"></i></div>
+         <div><i class="fab fa-twitter"></i></div>
+         <div><i class="fab fa-instagram"></i></div>
+         </div>
+        </div>
+    </footer>
+</body>
+</html>

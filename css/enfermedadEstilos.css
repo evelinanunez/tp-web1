@@ -1,0 +1,115 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Chewy&family=Lemonada&family=Work+Sans&display=swap');
+@import '../fonts/fuentes.css';
+@import 'all.css';
+
+.imagenCoronavirus {
+    height: 100%;
+    width: 100%;
+}
+
+.containerCoronavirus {
+    margin-top: 1em;
+    display: flex;
+    justify-content: space-between;
+}
+
+.containerImgCoronavirus {
+    flex: 0.45;
+}
+
+.containerDescripcion{
+    flex: 0.5;
+}
+
+.descripcionCoronavirus{   
+    font-family: arial, sans-serif;
+    font-size: 13px;
+    line-height: 20px;
+}
+
+.containerTest{
+    display: flex;
+    justify-content: space-between;
+}
+
+.containerDescripcionTest{
+    display: flex;
+    flex-direction: row;
+    flex:0.5;
+}
+
+.descripcionTest{
+    font-family: arial, sans-serif;
+    font-size: 17px;
+    line-height: 24px;
+    text-align: justify;
+}
+.containerFormularioTest{
+    display:flex;
+    flex: 0.45;
+}
+
+.itemsFormulario {
+    font-family: arial, sans-serif;
+    font-size: 17px;
+    line-height: 24px;
+    text-align: justify;
+    border-radius: 1em;
+    height: 2em;
+}
+
+.contenedorSintomasHabituales{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.descripcionSintoma {
+    text-align: center;
+    font-family: arial, sans-serif;
+    font-size: medium;
+}
+
+.imagenSintoma{
+    height: 130px;
+    width: 130px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.descripcionSintomaFinal{
+    text-align: center;
+    font-family: arial, sans-serif;
+    font-size: large;
+
+}
+
+.subtitulosCovid{
+    text-align: center;
+    font-family: arial, sans-serif;
+    font-size: xx-large;
+    margin-top: 1em;
+    margin-bottom: 1em;   
+}
+
+.contenedorDescripcionFinalSintomas{
+    border-color: black;
+    border: outset;
+}
+.imagenPrevencionCovid{
+    height: 450px;
+    justify-content: center;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+.titulosCovid{
+    padding: 9px;
+    background-color: aliceblue;
+    font-size: x-large;;
+    text-align: center;
+    font-weight: normal;
+    margin-top: 1em;
+    margin-bottom: 1em;   
+}
+
