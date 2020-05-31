@@ -149,8 +149,8 @@ main{
     
 }
 .contenedorenfermedad img{
-    max-height: 70%;
-    max-width:  70%;
+   max-width: 100%;
+    width:  20em;
 }
 .contenedorenfermedad div{
     width: calc(50% - 1em);
@@ -216,6 +216,7 @@ main{
 .contenedormenucentral img{
     max-width: 100%;
     border-radius: 20em;
+    width: 300px;
 }
 .contenedormenucentral a{
     text-decoration: none;
