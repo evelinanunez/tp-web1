@@ -1,23 +1,43 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Chewy&family=Lemonada&family=Work+Sans&display=swap');
 @import '../fonts/fuentes.css';
 @import 'all.css';
+/*
+font-family: 'Chewy', cursive;
+font-family: 'Lemonada', cursive;
+font-family: 'Work Sans', sans-serif;
+*/
 
+
+
+/*Estilos del header y footer*/
 *{
     margin: 0;
     padding: 0;
 }
+body{
+    background-image: url(../img/white-waves.png);
+    font-family: 'Work Sans', sans-serif;
+}
 /*estilos de etiqueta*/
 header{
-    background-image: url(../img/full-bloom.png);
+    /*background-image: url(../img/full-bloom.png);*/
+    background-color: #F7FFF7;
 }
 h1{
     text-align: center;
-    padding: 10px;
+    padding: 0.5em;
+    font-family: 'Chewy', cursive;
+    font-size: 3em;
+    font-weight: 100;/*grosor*/
 }
 h2{
-    padding: 10px;
+    padding: 1em;
+    font-family: 'Lemonada', cursive;;
 }
 footer{
-    background-image: url(../img/green_dust_scratch.png);
+    /*background-image: url(../img/green_dust_scratch.png);*/
+    background-color: #107FB5;
 }
 p{
     padding: 5px;
@@ -26,30 +46,44 @@ p{
 main{
     margin: auto;
     width: 90%;
+    margin-bottom: 1em;
+   
 }
 
-/*estilos de clase*/
+/*Estilos del header*/
 .estilosheader{
     display: flex;
     justify-content: space-around;
     align-items: center; /*para centrar los items del contenedor*/
+    padding: 10px;
 }
 .estilosheader img{
-   width: calc(50% - 10px);
+   width: calc(40% - 2em);
    box-sizing: border-box;
-   padding: 20px;
     
 }
-.estilosheader form{
-    width: 40%;
-    box-sizing: border-box;
-    padding: 50px;
-    margin: 5px;
+.contenedorbuscador{
+    display: flex;
 }
+.buscador{
+   padding: 1em;
+   border-radius: 1em;
+   display: inline-block;
+    width: 25em;
+}
+.buttonbuscar{
+    padding: 1em 2em;
+    border-radius: 1em
+}
+
+
+/*estilos del menu*/
 .menu{
     display: flex;
     justify-content:space-around;
     border-bottom: 5px solid #000;
+    background-color: #107FB5 ;
+  
 }
 
 .menu li{
@@ -57,14 +91,21 @@ main{
 }
 .menu a{
     text-decoration: none;
-    margin: 10px;
+    color: #fff;
+    font-family: 'Chewy', cursive;
+    font-size: 1.5em;
+    margin: 0.5em;
     display: block;
-    padding: 10px;
+    padding: 0.5em;
+    transition: background-color border-radius 1s;
 }
 .menu a:hover{
-    background-color: #efe728;
+    background-color: #009ABC;
     border-radius: 20px;
 }
+
+/*Estilos del footer!!*/
+
 .estilosfooter{
     display: flex;
     justify-content: space-between;
@@ -82,8 +123,14 @@ main{
     display: block;
     padding: 10px;
 }
-.buscadordeenfermedades{
-    text-align: center;
+.estilosfooter div{
+    width: calc(33% - 1em);
+    
+}
+
+/*Estilos del main pagina enfermedades */
+.contenedorlistaenfermedades p{
+    color:#fff;
 }
 .contenedorlistaenfermedades{
     display: flex;
@@ -91,26 +138,47 @@ main{
 }
 .contenedorlistaenfermedades article{
     display: flex;
-    border: 2px solid #000;
-    background-color: #8ef0da;
+    border-radius: 1em;
+    background-color: #009ABC;
     margin: 20px;
 }
 .contenedorenfermedad{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
+    
 }
 .contenedorenfermedad img{
-    height: 100px;
+    max-height: 70%;
+    max-width:  70%;
 }
 .contenedorenfermedad div{
-    width: calc (50% - 10px);
-    margin: 10px;
+    width: calc(50% - 1em);
+    margin: 1em;
+}
+
+.contenedorenfermedad p{
+    margin-bottom: 1em;
 }
 
 .contenedorlistaenfermedades section{
     margin: 20px;
 }
+.buscadordeenfermedades article {
+    display: flex;
+    justify-content: center;
+}
+
+.boton-detalle{
+    background-color: #000;
+    border-radius: 1em;
+    padding: 0.5em;
+    margin-bottom: 1em;
+    color: #fff;
+    text-decoration: none;
+}
+/*Estilos del main pagina index*/
+
 .contenedormain{
     display: flex;
     flex-direction: column;
@@ -120,31 +188,47 @@ main{
     margin: 10px;
 }
 
-
 .contenedorslaider {
-    display: block;
+    display: flex;
     text-align: center;
-    background-color: #5cafe3;
-    height: 200px;
-    padding: 20px;
-    
 }
 .contenedorslaider img{
-    width: 350px;
+    max-width: 100%;
+    max-height: 50%;
+
+}
+.contenedormenucentral h2{
+    line-height: 1.2em; /*interlineado*/
+    font-size: 1em;
 }
 .contenedormenucentral{
     display: flex;
+    text-align: center;
     justify-content:space-between;
-    align-items: center;
+    align-items: flex-start;
+    padding: 1em;
+    
 }
 .contenedormenucentral div{
-    border-radius: 50%;
+    width: calc(33% - 1em);
+
+}
+.contenedormenucentral img{
+    max-width: 100%;
+    border-radius: 20em;
+}
+.contenedormenucentral a{
+    text-decoration: none;
 }
 
-/*no se porque no lo esta tomando*/
 .contenedorredessociales{
     display: flex;
-    justify-content: space-between;
+}
+.contenedorredessociales i{
+    display: inline-block;
+    font-size:  2.5em;
+    margin-right: 0.5em;
+    
 }
 .contenedorllamado{
     display: flex;
@@ -152,4 +236,75 @@ main{
     height: 200px;
     background-color: #31e0cc;
     align-items: center;
+    -webkit-box-shadow: 8px 10px 5px 0px rgba(14,117,235,1);
+    -moz-box-shadow: 8px 10px 5px 0px rgba(14,117,235,1);
+     box-shadow: 8px 10px 5px 0px rgba(14,117,235,1);
+    
+}
+.contenedorllamado{
+     width: calc (40% - 2em);
+    justify-content: space-around;
+}
+.contenedorllamado p{
+    font-size: 1.9em;
+    font-family: 'Chewy', cursive;
+}
+
+.iconogrande{
+    font-size: 10em;
+    margin: auto;
+    text-align: center;
+}
+.mapa{
+    margin: auto;
+    text-align: center;
+}
+.mapa iframe{
+    width: 100%;
+    height: 500px;
+}
+
+/*Estilos del main de contacto*/
+.contenedor-contacto{
+    display: flex;
+    justify-content: space-around;
+    padding: 3em;
+}
+.contenedor-contacto article{
+    width: calc(50% - 2em);
+}
+.contacto{
+    display: flex;
+    flex-direction: column;
+}
+.main-contacto{
+    margin-top: 2.5em;
+    margin-bottom: 2.5em;
+}
+.mapa-contacto{
+    margin: auto;
+    text-align: center;
+}
+.mapa-contacto iframe{
+    width: 100%;
+    height: 300px;
+}
+.input-formulario{
+    border-radius: 1em;
+    height: 2em;
+ 
+}
+.box-mensaje{
+    height: 7em;
+     border-radius: 1em;
+    box-sizing: border-box;
+    padding: 2em;
+    margin-bottom: 0.5em;
+    margin-top: 0.5em;
+    
+}
+.boton-contacto{
+    display: inline;
+    width: 5em;
+   
 }
