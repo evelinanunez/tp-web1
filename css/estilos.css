@@ -1,226 +1,310 @@
-/*Estilos  genericos*/
+
+@import url('https://fonts.googleapis.com/css2?family=Chewy&family=Lemonada&family=Work+Sans&display=swap');
+@import '../fonts/fuentes.css';
+@import 'all.css';
+/*
+font-family: 'Chewy', cursive;
+font-family: 'Lemonada', cursive;
+font-family: 'Work Sans', sans-serif;
+*/
+
+
+
+/*Estilos del header y footer*/
 *{
     margin: 0;
     padding: 0;
 }
-/*Estilos de etiquetas semanticas */
+body{
+    background-image: url(../img/white-waves.png);
+    font-family: 'Work Sans', sans-serif;
+}
+/*estilos de etiqueta*/
 header{
-    background-image: url(../img/full-bloom.png);
+    /*background-image: url(../img/full-bloom.png);*/
+    background-color: #F7FFF7;
 }
-p{
-    font-family: arial, sans-serif;
-    font-size:20px;
-}
-main{
-    width: 80%;
-    margin: auto;
-}
-section{
-    padding: 20px;
+h1{
+    text-align: center;
+    padding: 0.5em;
+    font-family: 'Chewy', cursive;
+    font-size: 3em;
+    font-weight: 100;/*grosor*/
 }
 h2{
-   padding: 30px;
-   background-color: aliceblue;
-   font-size:2em;
-   text-align: center;
-   font-weight: normal;
-}
-article{
-    padding: 100px;
-    text-align: center;
-    background: #1bc1ea;
-    margin-bottom: 20px;
-    height: 30px;/*Le tuve que poner el mismo alto a todo porque sino la caja de mapa de hospitales que quedaba mas alto porque por defoult tienen el alto del contenido */
-    box-sizing: border-box
-    
+    padding: 1em;
+    font-family: 'Lemonada', cursive;;
 }
 footer{
-    padding: 60px;
-    margin:5px;
-    border-radius: 15px;
+    /*background-image: url(../img/green_dust_scratch.png);*/
+    background-color: #107FB5;
+}
+p{
+    padding: 5px;
 }
 
-h3{
-    padding: 9px;
-    background-color: aliceblue;
-    font-size: x-large;;
-    text-align: center;
-    font-weight: normal;
- }
- h4{
-    padding: 30px;
-    font-size: x-large;
-    text-align: center;
-    font-weight: normal;
- }
+main{
+    margin: auto;
+    width: 90%;
+    margin-bottom: 1em;
+   
+}
 
- h1 {
-     text-align: center;
- }
-
-
-/*Estilos de clase*/
+/*Estilos del header*/
 .estilosheader{
     display: flex;
     justify-content: space-around;
     align-items: center; /*para centrar los items del contenedor*/
+    padding: 10px;
 }
 .estilosheader img{
-   width: calc(50% - 10px);
+   width: calc(40% - 2em);
    box-sizing: border-box;
-   padding: 20px;
     
 }
-.estilosheader form{
-    width: 40%;
-    box-sizing: border-box;
-    padding: 50px;
-    margin: 5px;
+.contenedorbuscador{
+    display: flex;
+}
+.buscador{
+   padding: 1em;
+   border-radius: 1em;
+   display: inline-block;
+    width: 25em;
+}
+.buttonbuscar{
+    padding: 1em 2em;
+    border-radius: 1em
 }
 
-.contenedorslaider{
-   display:block;
-   height: 200px; /*Aca tuve que darle alto, pero no es lo correcto me parece*/
-   text-align: center; 
+
+/*estilos del menu*/
+.menu{
+    display: flex;
+    justify-content:space-around;
+    border-bottom: 5px solid #000;
+    background-color: #107FB5 ;
+  
 }
 
-/*Linea con tres columnas que informa Enfermedades, Hospitales y Vacunas*/
-/*Cuando reduzco la pantalla se ve que  las tres columnas sobrepasan los limites del main*/
-.contenedor{
-   display: flex;
-   flex-direction: row; /* no es necesario ponerlo es la opcion por de defoult*/
-   justify-content:space-around;
-   align-items:flex-start;
-   flex-wrap: nowrap; /*redestribuye los elementos para que entren en una sola linea tmb es por defoult*/
+.menu li{
+    list-style: none;
+}
+.menu a{
+    text-decoration: none;
+    color: #fff;
+    font-family: 'Chewy', cursive;
+    font-size: 1.5em;
+    margin: 0.5em;
+    display: block;
+    padding: 0.5em;
+    transition: background-color border-radius 1s;
+}
+.menu a:hover{
+    background-color: #009ABC;
+    border-radius: 20px;
+}
+
+/*Estilos del footer!!*/
+
+.estilosfooter{
+    display: flex;
+    justify-content: space-between;
+}
+.menuinferior{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.menuinferior {
+    list-style: none;
+}
+.menuinferior a{
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+}
+.estilosfooter div{
+    width: calc(33% - 1em);
+    
+}
+
+/*Estilos del main pagina enfermedades */
+.contenedorlistaenfermedades p{
+    color:#fff;
+}
+.contenedorlistaenfermedades{
+    display: flex;
+    flex-direction: column;
+}
+.contenedorlistaenfermedades article{
+    display: flex;
+    border-radius: 1em;
+    background-color: #009ABC;
+    margin: 20px;
+}
+.contenedorenfermedad{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+.contenedorenfermedad img{
+    max-height: 70%;
+    max-width:  70%;
+}
+.contenedorenfermedad div{
+    width: calc(50% - 1em);
+    margin: 1em;
+}
+
+.contenedorenfermedad p{
+    margin-bottom: 1em;
+}
+
+.contenedorlistaenfermedades section{
+    margin: 20px;
+}
+.buscadordeenfermedades article {
+    display: flex;
+    justify-content: center;
+}
+
+.boton-detalle{
+    background-color: #000;
+    border-radius: 1em;
+    padding: 0.5em;
+    margin-bottom: 1em;
+    color: #fff;
+    text-decoration: none;
+}
+/*Estilos del main pagina index*/
+
+.contenedormain{
+    display: flex;
+    flex-direction: column;
+}
+.contenedormain article {
+    padding: 30px;
+    margin: 10px;
+}
+
+.contenedorslaider {
+    display: flex;
+    text-align: center;
+}
+.contenedorslaider img{
+    max-width: 100%;
+    max-height: 50%;
+
+}
+.contenedormenucentral h2{
+    line-height: 1.2em; /*interlineado*/
+    font-size: 1em;
+}
+.contenedormenucentral{
+    display: flex;
+    text-align: center;
+    justify-content:space-between;
+    align-items: flex-start;
+    padding: 1em;
+    
+}
+.contenedormenucentral div{
+    width: calc(33% - 1em);
+
+}
+.contenedormenucentral img{
+    max-width: 100%;
+    border-radius: 20em;
+}
+.contenedormenucentral a{
+    text-decoration: none;
+}
+
+.contenedorredessociales{
+    display: flex;
+}
+.contenedorredessociales i{
+    display: inline-block;
+    font-size:  2.5em;
+    margin-right: 0.5em;
+    
 }
 .contenedorllamado{
     display: flex;
-    justify-content:space-around;
-    background-color:#1bc1ea;
-
-}
-
-.contenedorfooter{
-    display: flex;
     justify-content: space-between;
-    background-color:#1bc1ea;
-    margin-top: 10px;
-
+    height: 200px;
+    background-color: #31e0cc;
+    align-items: center;
+    -webkit-box-shadow: 8px 10px 5px 0px rgba(14,117,235,1);
+    -moz-box-shadow: 8px 10px 5px 0px rgba(14,117,235,1);
+     box-shadow: 8px 10px 5px 0px rgba(14,117,235,1);
     
 }
-/*menu del index, que se replicara en todas las paginas*/
-.menu{
-     background-color: #1bc1ea;
-     border-radius: 15px;
-     margin:5px;
-    }
-    .menu ul{ /* el ul funcionaria como contenedor*/    display: flex;
-    justify-content: center;
+.contenedorllamado{
+     width: calc (40% - 2em);
+    justify-content: space-around;
 }
-.menu li{
-    list-style: none; /* pasa sacar los puntos de los li*/
-}
-.menu a{
-    text-decoration: none; /*saca el subrayado*/
-    color:#fff;
-    padding: 20px;
-    display: block; /*hace que los a se comporten como un bloque, para que se les aplique el padding*/
-}
-.menu a:hover{
-    background-color: #fff;
-    color: #000;
+.contenedorllamado p{
+    font-size: 1.9em;
+    font-family: 'Chewy', cursive;
 }
 
-.imagenCoronavirus {
-    height: 100%;
+.iconogrande{
+    font-size: 10em;
+    margin: auto;
+    text-align: center;
+}
+.mapa{
+    margin: auto;
+    text-align: center;
+}
+.mapa iframe{
     width: 100%;
+    height: 500px;
 }
 
-.containerCoronavirus {
-
+/*Estilos del main de contacto*/
+.contenedor-contacto{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
+    padding: 3em;
 }
-
-.containerImgCoronavirus {
-    flex: 0.45;
+.contenedor-contacto article{
+    width: calc(50% - 2em);
 }
-
-.containerDescripcion{
-    flex: 0.5;
-}
-
-.descripcionCoronavirus{   
-    font-family: arial, sans-serif;
-    font-size: 13px;
-    line-height: 20px;
-}
-
-.containerTest{
+.contacto{
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
 }
-
-.containerDescripcionTest{
-    display: flex;
-    flex-direction: row;
-    flex:0.5;
+.main-contacto{
+    margin-top: 2.5em;
+    margin-bottom: 2.5em;
 }
-
-.descripcionTest{
-    font-family: arial, sans-serif;
-    font-size: 17px;
-    line-height: 24px;
-    text-align: justify;
-}
-.containerFormularioTest{
-    display:flex;
-    flex: 0.45;
-}
-
-.itemsFormulario {
-    font-family: arial, sans-serif;
-    font-size: 17px;
-    line-height: 24px;
-    text-align: justify;
-}
-
-.contenedorSintomasHabituales{
-    display: flex;
-    justify-content: space-evenly;
-}
-
-.descripcionSintoma {
+.mapa-contacto{
+    margin: auto;
     text-align: center;
-    font-family: arial, sans-serif;
-    font-size: medium;
 }
-
-.imagenSintoma{
-    height: 130px;
-    width: 130px;
+.mapa-contacto iframe{
+    width: 100%;
+    height: 300px;
 }
-
-
-.descripcionSintomaFinal{
-    text-align: center;
-    font-family: arial, sans-serif;
-    font-size: large;
-
+.input-formulario{
+    border-radius: 1em;
+    height: 2em;
+ 
 }
-
-.subtitulos{
-    text-align: center;
-    font-family: arial, sans-serif;
-    font-size: xx-large;
+.box-mensaje{
+    height: 7em;
+     border-radius: 1em;
+    box-sizing: border-box;
+    padding: 2em;
+    margin-bottom: 0.5em;
+    margin-top: 0.5em;
+    
 }
-
-.contenedorDescripcionFinalSintomas{
-    border-color: black;
-    border: outset;
+.boton-contacto{
+    display: inline;
+    width: 5em;
+   
 }
-.imagenPrevencionCovid{
-    height: 400px;
-    justify-content: center;
-}
-/*Estilos de id*/
