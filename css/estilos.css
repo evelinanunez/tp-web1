@@ -113,7 +113,7 @@ main{
 .menuinferior{
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
 }
 .menuinferior {
     list-style: none;
