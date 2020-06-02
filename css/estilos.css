@@ -113,7 +113,8 @@ main{
 .menuinferior{
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    line-height: 0.3em;
+    
 }
 .menuinferior {
     list-style: none;
