@@ -106,7 +106,8 @@ main{
 
 .estilosfooter{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
+    padding: 2em;
 }
 .menuinferior{
     display: flex;
@@ -122,8 +123,8 @@ main{
 }
 .menuinferior a{
     text-decoration: none;
-    display: block;
-    padding: 10px;
+     display: block;
+     padding: 10px;
 }
 .estilosfooter div{
     width: calc(33% - 1em); 
