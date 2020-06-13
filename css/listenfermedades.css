@@ -1,0 +1,49 @@
+/*Estilos del main pagina enfermedades */
+.contenedorlistaenfermedades p{
+    color:#fff;
+}
+.contenedorlistaenfermedades{
+    display: flex;
+    flex-direction: column;
+}
+.contenedorlistaenfermedades article{
+    display: flex;
+    border-radius: 1em;
+    background-color: #009ABC;
+    margin: 20px;
+}
+.contenedorenfermedad{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+.contenedorenfermedad img{
+   max-width: 100%;
+    width:  20em;
+}
+.contenedorenfermedad div{
+    width: calc(50% - 1em);
+    margin: 1em;
+}
+
+.contenedorenfermedad p{
+    margin-bottom: 1em;
+}
+
+.contenedorlistaenfermedades section{
+    margin: 20px;
+}
+.buscadordeenfermedades article {
+    display: flex;
+    justify-content: center;
+}
+
+.boton-detalle{
+    background-color: #000;
+    border-radius: 1em;
+    padding: 0.5em;
+    margin-bottom: 1em;
+    color: #fff;
+    text-decoration: none;
+}
