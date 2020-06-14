@@ -95,7 +95,7 @@
                             <label for="apellido" class="itemsFormulario">Apellido:</label>
                             <input type="text" id="apellido" name="apellido" placeholder="Ingrese su nombre">   
                        
-                            <label for="dni" class="itemsFormulario">DNI</label>
+                            <label for="documentoNro" class="itemsFormulario">DNI</label>
                             <input type="number" id="documentoNro" name="correo"  placeholder="ingrese su documento">       
                     
                             <label for="tel" class="itemsFormulario">Teléfono</label>
@@ -110,9 +110,9 @@
                                 </div>  
                             </div>
                         </div>
-                        <div class="margenCampos,ocultarPaises">
+                        <div class="margenCampos" id="pais">
                             <label for="paises" class="itemsFormulario" >Paises:</label>
-                            <input list="paises" name="pais" id="pais" >
+                            <input list="paises" name="pais"  >
                             <datalist id="paises">
                                 <option value="Pais de Norteamérica">
                                 <option value="Pais de Sudamérica">
@@ -151,27 +151,35 @@
                             </div>
                             <div class="item-button">
                                   <div class="item-input">
-                                      Si <input type="radio" name="fiebre"> No <input type="radio" name="fiebre" >
+                                      Si <input type="radio" name="fiebre"> 
+                                      No <input type="radio" name="fiebre" >
                                   </div>
                                   <div class="item-input">
-                                      Si <input type="radio" name="dolorCabeza" > No <input type="radio" name="dolorCabeza">
+                                      Si <input type="radio" name="dolorCabeza" > 
+                                      No <input type="radio" name="dolorCabeza">
                                   </div>
                                   <div class="item-input">
-                                      Si <input type="radio" name="tosPersistente" > No <input type="radio" name="tosPersistente"> 
+                                      Si <input type="radio" name="tosPersistente" > 
+                                      No <input type="radio" name="tosPersistente"> 
                                   </div>
                                   <div class="item-input">
-                                      Si <input type="radio" name="dolorGarganta" > No <input type="radio" name="dolorGarganta" >
+                                      Si <input type="radio" name="dolorGarganta" > 
+                                      No <input type="radio" name="dolorGarganta" >
                                   </div>
                                   <div class="item-input">
-                                     Si <input type="radio" name="dificultadRespirar" > No <input type="radio" name="dificultadRespirar" > 
+                                     Si <input type="radio" name="dificultadRespirar" value="si" onchange="mostrarYOcultarDireccion()"> 
+                                     No <input type="radio" name="dificultadRespirar" value="no" onchange="mostrarYOcultarDireccion()"> 
                                   </div>
                                   
                             </div> 
                             </div>
                         </div>
                         <div class="margenCampos">
-                                <label for="dni" class="itemsFormulario" >Direccion</label>
-                                <input type="dni" id="direccion" name="direccion"  placeholder="ingrese una direccion">
+                            <div id="direccion">
+                                <label for="direccion" class="itemsFormulario" >Direccion: </label>
+                                <input type="text"  name="direccion"  placeholder="ingrese una direccion">  
+                            </div>
+                            <div>
                                 <label for="ciudades" class="itemsFormulario">Ciudad:</label>
                                 <input list="ciudades" name="ciudad" id="ciudad">
                                 <datalist id="ciudades">
@@ -181,7 +189,9 @@
                                     <option value="Zona Sur">
                                     <option value="Zona Este">
                                     <option value="Otro">
-                                </datalist>        
+                                </datalist>  
+                            </div>  
+                                     
                         </div>
                         <input type="submit" value="Enviar Test" class="boton-enviar-test">
                         <div  id="mensajes" class="error">

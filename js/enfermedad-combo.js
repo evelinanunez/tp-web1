@@ -12,3 +12,17 @@ function cambiar(){
          }
      }
 }
+function mostrarYOcultarDireccion(){
+    //alert("estoy");
+    var opciones= document.getElementsByName("dificultadRespirar");
+    for( i in opciones){
+        if(opciones[i].value=="si" && opciones[i].checked){
+            //alert("mostrar");
+            document.getElementById("direccion").style.display="block";
+        }
+        if(opciones[i].value=="no" && opciones[i].checked){
+            //alert("ocultar")
+            document.getElementById("direccion").style.display="none";
+        }
+    }
+}

@@ -116,10 +116,13 @@
     margin-bottom: 1em;   
 }
 
-}
-.ocultarPaises{
+
+#pais{
     display: none;
 }
+#direccion{
+    display: none;
+}  
 .contenedorFormulario{
     display: flex;
 }

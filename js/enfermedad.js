@@ -38,16 +38,22 @@ function validar(){
     }
     if(!seleccionado){
         error=true;
-        mensajesError+="<p>Debe seleccionar respuesta a la pregunta tuvo fiebre</p>";
+        mensajesError+="<p>Debe seleccionar respuesta a la pregunta tuviste fiebre</p>";
     }
     var opciones=document.getElementsByName("dolorCabeza");
     var seleccionado=false;
+    var totalSintomas= Number;
+
     for(i in opciones){
         if(opciones[i].checked){
             seleccionado=true;
         }else{
             seleccionado=false;
         }
+    }
+    if(seleccionado){
+        error=false;
+        totalsintomas+=1;
     }
     if(!seleccionado){
         error=true;
