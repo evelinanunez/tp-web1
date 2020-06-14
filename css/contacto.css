@@ -6,6 +6,7 @@
 }
 .contenedor-contacto article{
     width: calc(50% - 2em);
+    padding: 1em;;
 }
 .contacto{
     display: flex;
@@ -23,14 +24,14 @@
     width: 100%;
     height: 300px;
 }
-.input-formulario{
+/*.input-formulario{
     border-radius: 1em;
     height: 2em;
  
-}
+}*/
 .box-mensaje{
     height: 7em;
-     border-radius: 1em;
+    /*border-radius: 1em;*/
     box-sizing: border-box;
     padding: 2em;
     margin-bottom: 0.5em;
@@ -38,7 +39,14 @@
     
 }
 .boton-contacto{
-    display: inline;
+    display: inline-block;
     width: 5em;
+    height: 2em;
+    border-radius: 0.3em;
    
+}
+#color-formulario{
+    background-color: rgba(208, 198, 198, 0.796);
+    border-radius: 0.5em;
+    opacity: 0.8;
 }

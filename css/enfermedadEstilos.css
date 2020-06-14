@@ -1,7 +1,7 @@
-
+/*
 @import url('https://fonts.googleapis.com/css2?family=Chewy&family=Lemonada&family=Work+Sans&display=swap');
 @import '../fonts/fuentes.css';
-@import 'all.css';
+@import 'all.css';*/
 
 .imagenCoronavirus {
     height: 100%;
@@ -30,34 +30,37 @@
 
 .containerTest{
     display: flex;
-    justify-content: space-between;
+   /* justify-content: space-between;*/
 }
 
-.containerDescripcionTest{
+/*.containerDescripcionTest{
     display: flex;
     flex-direction: row;
     flex:0.5;
-}
+}*/
 
-.descripcionTest{
+/*.descripcionTest{
     font-family: arial, sans-serif;
     font-size: 17px;
     line-height: 24px;
     text-align: justify;
-}
-.containerFormularioTest{
+
+}*/
+/*.containerFormularioTest{
     display:flex;
     flex: 0.45;
-}
+}*/
 
-.itemsFormulario {
+/*.itemsFormulario {
     font-family: arial, sans-serif;
     font-size: 17px;
     line-height: 24px;
     text-align: justify;
     border-radius: 1em;
     height: 2em;
-}
+    display: inline-block;
+    width: fit-content;;
+}*/
 
 .contenedorSintomasHabituales{
     display: flex;
@@ -113,7 +116,55 @@
     margin-bottom: 1em;   
 }
 
-.containerFormularioTest input{
-    border-radius: 0.8em;
+}
+.ocultarPaises{
+    display: none;
+}
+.contenedorFormulario{
+    display: flex;
+}
+.contenedorFormulario div{
+    flex-wrap:wrap;
+    flex-direction: column;
+
+}
+.containerTest article{
+    width: calc(50% - 2em);
+    padding: 1em
+}
+.display-button{
+    display: flex;
+    justify-content: space-between;
+    
+}
+.display-button label{
+    display: block;
+   
+}
+.item-input{
+    display: block;
+    justify-content: space-between;
+    
+}
+.margenCampos{
+    margin-bottom: 0.5em;
+}
+#color-formulario{
+    background-color: rgba(208, 198, 198, 0.796);
+    border-radius: 0.5em;
+    opacity: 0.8;
+}
+#flex-formulario{
+    display: flex;
+    flex-direction: column;
+}
+#campo-linea{
+    display: inline;
+}
+.boton-enviar-test{
+    display: inline-block;
+    width: 6em;
     height: 2em;
+    border-radius: 0.3em;
+   
 }

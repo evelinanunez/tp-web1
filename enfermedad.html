@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="css/estilos.css">
     <link rel="stylesheet" href="css/enfermedadEstilos.css">
     <script src="js/enfermedad.js"></script>
+    <script src="js/enfermedad-combo.js"></script>
 </head>
 <body>
    <datalist id="buscador"><!--no se como dejar una opcion marcada por defecto-->
@@ -77,89 +78,114 @@
 
         <h3 class="titulosCovid" >Formulario de detección (test) de Coronavirus (COVID19)</h3>
         <section class="containerTest">
-            <article class="containerDescripcionTest">
-                <p class="descripcionTest">“Hola usuario! Si tienes síntomas de XXXX o has estado en contacto con una persona afectada deberías
+            <article >
+                <p  >“Hola usuario! Si tienes síntomas de XXXX o has estado en contacto con una persona afectada deberías
                     hacer un control y seguimiento diario de tus síntomas.
                     Esta aplicación te permitirá hacer un seguimiento de la evolución de los síntomas y te dará las
                     indicaciones y consejos a seguir en cada caso. El uso de este servicio supone la aceptación de los
                     términos y la política de privacidad descritos en 'Ver las condiciones y políticas'”
                 </p>         
             </article>
-            <article class="containerFormularioTest">
-                <form action="#"  onsubmit="return validar()"  enctype="application/x-www-form-urlencoded">
-                    <label for="nombre" class="itemsFormulario">Nombre:</label>
-                    <input type="text" id="nombre" name="nombre"  placeholder="Ingrese su nombre">
-                    <label for="apellido" class="itemsFormulario">Apellido:</label>
-                    <input type="text" id="apellido" name="apellido" placeholder="Ingrese su nombre">
-                    <br><br>
-                    <label for="dni" class="itemsFormulario">DNI</label>
-                    <input type="number" id="documentoNro" name="correo"  placeholder="ingrese su documento">
-                    <label for="tel" class="itemsFormulario">Teléfono</label>
-                    <input type="tel" id="tel" name="telefono"  placeholder="ingrese su telefono">
-                    <br><br>
-                    <label for="consultaViaje" class="itemsFormulario">¿Has viajado al exterior de la República Argentina?</label>
-                    <label for="si" class="itemsFormulario">Si  </label><input type="radio" name="viajo" >
-                    <label for="no" class="itemsFormulario" >No  </label><input type="radio" name="viajo" >
-                    <br>
-                    <label for="paises" class="itemsFormulario">Paises:</label>
-                    <input list="paises" name="pais" id="pais">
-                    <datalist id="paises">
-                    <option value="Pais de Norteamérica">
-                    <option value="Pais de Sudamérica">
-                    <option value="País de Europa">
-                    <option value="País de África">
-                    <option value="País de Asia">
-                    <option value="Otro">
-                    </datalist>
-                    <br><br>
-                    <label for="ciudades" class="itemsFormulario">Ciudad:</label>
-                    <input list="ciudades" name="ciudad" id="ciudad">
-                    <datalist id="ciudades">
-                    <option value="Ciudad de Buenos Aires">
-                    <option value="Zona Oeste">
-                    <option value="Zona Norte">
-                    <option value="Zona Sur">
-                    <option value="Zona Este">
-                    <option value="Otro">
-                    </datalist>
-                    <label for="consultaSexo" class="itemsFormulario" >Sexo</label>
-                    <label for="femenino">F  </label><input type="radio" name="sexo" >
-                    <label for="masculino">M  </label><input type="radio" name="sexo" >
-                    <br><br>
-                    <label for="" class="itemsFormulario" > Por Favor, indique los síntomas que representas: </label>
-                    <br><br>
-                    <label for="" class="itemsFormulario" >¿Tuviste fiebre mayor a 38 grados?:</label>
-                    Si <input type="radio" name="fiebre"> No <input type="radio" name="fiebre" >
-                    <br><br>
-                    <label for="" class="itemsFormulario" >¿Tuviste dolor de cabeza?:</label>
-                    Si <input type="radio" name="dolorCabeza" > No <input type="radio" name="dolorCabeza"  >
-                    <br><br>
-                    <label for=""class="itemsFormulario" >¿Tuviste una tos persistente?:</label>
-                    Si <input type="radio" name="tosPersistente" > No <input type="radio" name="tosPersistente">
-                    <br><br>
-                    <label for="" class="itemsFormulario" >¿Tuviste dolor de garganta?:</label>
-                    Si <input type="radio" name="dolorGarganta" > No <input type="radio" name="dolorGarganta" >
-                    <br><br>
-                    <label for="" class="itemsFormulario" >¿Tuviste dificulad para respirar?:</label>
-                    Si <input type="radio" name="dificultadRespirar" > No <input type="radio" name="dificultadRespirar" >
-                    <br><br>
-                    <label for="dni" class="itemsFormulario" >Direccion</label>
-                    <input type="dni" id="direccion" name="direccion"  placeholder="ingrese una direccion">
-                    <label for="ciudades" class="itemsFormulario">Ciudad:</label>
-                    <input list="ciudades" name="ciudad" id="ciudad">
-                    <datalist id="ciudades">
-                    <option value="Ciudad de Buenos Aires">
-                    <option value="Zona Oeste">
-                    <option value="Zona Norte">
-                    <option value="Zona Sur">
-                    <option value="Zona Este">
-                    <option value="Otro">
-                    </datalist>
-                    <br><br>
-                    <input type="submit" value="Enviar Test">
-                    <div  id="mensajes" class="error">
-
-                    </div>
+            <article id="color-formulario">
+                <form id="flex-formulario"action="#"  onsubmit="return validar()"  enctype="application/x-www-form-urlencoded">
+                       
+                            <label for="nombre" >Nombre:</label>
+                            <input type="text" id="nombre" name="nombre"  placeholder="Ingrese su nombre">
+                       
+                            <label for="apellido" class="itemsFormulario">Apellido:</label>
+                            <input type="text" id="apellido" name="apellido" placeholder="Ingrese su nombre">   
+                       
+                            <label for="dni" class="itemsFormulario">DNI</label>
+                            <input type="number" id="documentoNro" name="correo"  placeholder="ingrese su documento">       
+                    
+                            <label for="tel" class="itemsFormulario">Teléfono</label>
+                            <input type="tel" id="tel" name="telefono"  placeholder="ingrese su telefono">
+                   
+                        <div class="margenCampos">
+                            <div class="display-button">
+                                <div class="item-button">
+                                  <p id="campo-linea">¿Has viajado al exterior de la República Argentina?</p>
+                                    Si <input type="radio" name="viajo" value="si"  onchange="cambiar()">
+                                    No <input type="radio" name="viajo" value="no" onchange="cambiar()" >  
+                                </div>  
+                            </div>
+                        </div>
+                        <div class="margenCampos,ocultarPaises">
+                            <label for="paises" class="itemsFormulario" >Paises:</label>
+                            <input list="paises" name="pais" id="pais" >
+                            <datalist id="paises">
+                                <option value="Pais de Norteamérica">
+                                <option value="Pais de Sudamérica">
+                                <option value="País de Europa">
+                                <option value="País de África">
+                                <option value="País de Asia">
+                                <option value="Otro">
+                            </datalist>
+                        </div>
+                        <div class="margenCampos">
+                            <label for="ciudades" class="itemsFormulario">Ciudad:</label>
+                            <input list="ciudades" name="ciudad" id="ciudad">
+                            <datalist id="ciudades">
+                                <option value="Ciudad de Buenos Aires">
+                                <option value="Zona Oeste">
+                                <option value="Zona Norte">
+                                <option value="Zona Sur">
+                                <option value="Zona Este">
+                                <option value="Otro">
+                             </datalist> 
+                        </div>
+                       <div class="margenCampos">
+                            <label for="consultaSexo" class="itemsFormulario" >Sexo</label>
+                            <label for="femenino" >F  </label><input type="radio" name="sexo"  >
+                            <label for="masculino">M  </label><input type="radio" name="sexo" >   
+                        </div>
+                            <p>Por Favor, indique los síntomas que representas: </p> 
+                        <div class="margenCampos">
+                            <div class="display-button">
+                             <div class="item-button">
+                                 <label for="" class="itemsFormulario" >¿Tuviste fiebre mayor a 38 grados?:</label>
+                                 <label for="" class="itemsFormulario" >¿Tuviste dolor de cabeza?:</label> 
+                                 <label for=""class="itemsFormulario" >¿Tuviste una tos persistente?:</label>
+                                 <label for="" class="itemsFormulario" >¿Tuviste dolor de garganta?:</label>
+                                 <label for="" class="itemsFormulario" >¿Tuviste dificulad para respirar?:</label>
+                            </div>
+                            <div class="item-button">
+                                  <div class="item-input">
+                                      Si <input type="radio" name="fiebre"> No <input type="radio" name="fiebre" >
+                                  </div>
+                                  <div class="item-input">
+                                      Si <input type="radio" name="dolorCabeza" > No <input type="radio" name="dolorCabeza">
+                                  </div>
+                                  <div class="item-input">
+                                      Si <input type="radio" name="tosPersistente" > No <input type="radio" name="tosPersistente"> 
+                                  </div>
+                                  <div class="item-input">
+                                      Si <input type="radio" name="dolorGarganta" > No <input type="radio" name="dolorGarganta" >
+                                  </div>
+                                  <div class="item-input">
+                                     Si <input type="radio" name="dificultadRespirar" > No <input type="radio" name="dificultadRespirar" > 
+                                  </div>
+                                  
+                            </div> 
+                            </div>
+                        </div>
+                        <div class="margenCampos">
+                                <label for="dni" class="itemsFormulario" >Direccion</label>
+                                <input type="dni" id="direccion" name="direccion"  placeholder="ingrese una direccion">
+                                <label for="ciudades" class="itemsFormulario">Ciudad:</label>
+                                <input list="ciudades" name="ciudad" id="ciudad">
+                                <datalist id="ciudades">
+                                    <option value="Ciudad de Buenos Aires">
+                                    <option value="Zona Oeste">
+                                    <option value="Zona Norte">
+                                    <option value="Zona Sur">
+                                    <option value="Zona Este">
+                                    <option value="Otro">
+                                </datalist>        
+                        </div>
+                        <input type="submit" value="Enviar Test" class="boton-enviar-test">
+                        <div  id="mensajes" class="error">
+                        </div>
                 </form>
             </article>
         </section>
