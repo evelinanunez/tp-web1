@@ -28,50 +28,31 @@ function validar(){
     }
 
 
-    var opciones= document.getElementsByName("fiebre");
-    var seleccionado=false;
-    for(i in opciones){
-        if(opciones[i].checked){
-            seleccionado=true;
-        }else{
-            seleccionado=false;
-           
-        }
-        
-    }
-    if(!seleccionado){
-        error=true;
-        mensajesError+="<p>Debe seleccionar respuesta a la pregunta tuviste fiebre</p>";
-    }
-           
+       
         
     
 
 
     // para los radio button, con name en comun
 
-    /*var opciones=document.getElementsByName("fiebre");//Arrays con todos los elementos de name "fiebre"
+    var opciones=document.getElementsByName("fiebre");//Arrays con todos los elementos de name "fiebre"
     var seleccionado=false; // Si una variable esta seleccionado pasa de false a true.
     for(i in opciones){
         if(opciones[i].checked ){
             seleccionado=true;       
-        }else {
-             seleccionado=false;
-         }
+        }
         }
     if(!seleccionado){
         error=true;
         mensajesError+="<p>Debe seleccionar respuesta a la pregunta tuviste fiebre</p>";
-    }*/
-    /*
+    }
+    
     var opciones=document.getElementsByName("dolorCabeza");
     var seleccionado=false;
 
     for(i in opciones){
         if(opciones[i].checked){
             seleccionado=true;
-        }else{
-            seleccionado=false;
         }
     }
   
@@ -84,8 +65,6 @@ function validar(){
     for(i in opciones){
         if(opciones[i].checked){
             seleccionado=true;
-        }else{
-            seleccionado=false;
         }
     }
     if(!seleccionado){
@@ -98,8 +77,6 @@ function validar(){
     for(i in opciones){
         if(opciones[i].checked){
             seleccionado=true;
-        }else{
-            seleccionado=false
         }
     }
     if(!seleccionado){
@@ -111,15 +88,13 @@ function validar(){
     for(i in opciones){
         if(opciones[i].checked){
             seleccionado=true;
-        }else{
-            seleccionado=false
         }
     }
     if(!seleccionado){
         error=true;
         mensajesError+="<p>Debe seleccionar respuesta a la pregunta tuviste dificultad al respirar </p>";
     }
-    */
+    
     if(error){
 
         document.getElementById("mensajes").innerHTML=mensajesError;
