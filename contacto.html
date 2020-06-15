@@ -57,7 +57,8 @@
                 <label for="email">Email:</label>
                 <input type="email" name="email" id="email" class="input-formulario">
                 <label for="mensaje"></label>
-                <input type="long text" id="mensaje" name="mensaje" class="box-mensaje">
+                <input type="long text" id="mensaje" name="mensaje" class="box-mensaje" onkeyup="contarCaracteres()">
+                <p><span id="caracteres"></span>/1000</p>
                 
                 <div id="mensajes" class="error">
 

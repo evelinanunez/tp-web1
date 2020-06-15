@@ -26,6 +26,22 @@ function validar(){
         error=true;
         mensajesError+="<p>El campo Telefono es obligatorio</p>";
     }
+
+
+    var opciones= document.getElementById("fiebre");
+    var seleccionado=false;
+    for(i in opciones){
+        if(opciones[i].checked){
+            seleccionado=true;
+        }else{
+            seleccionado=false;
+           
+        }
+        
+    }
+    
+           
+        
     
 
 
