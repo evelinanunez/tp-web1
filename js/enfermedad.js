@@ -28,7 +28,7 @@ function validar(){
     }
 
 
-    var opciones= document.getElementById("fiebre");
+    var opciones= document.getElementsByName("fiebre");
     var seleccionado=false;
     for(i in opciones){
         if(opciones[i].checked){
@@ -39,7 +39,10 @@ function validar(){
         }
         
     }
-    
+    if(!seleccionado){
+        error=true;
+        mensajesError+="<p>Debe seleccionar respuesta a la pregunta tuviste fiebre</p>";
+    }
            
         
     
