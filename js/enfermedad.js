@@ -98,9 +98,9 @@ function validar(){
         return false;
     }else{
         document.getElementById("mensajes").innerHTML="<p>El formulario fue completado correctamente.</p>"+ contadorDeSintomas + "<p>sintomas de COVID-19 fueron registrados.</p>";
-        return true;//Esto hace que el formulario se envie.  //Aca la profe dijo que tiene que ir false, porque sino con el envío se refresca la pagina...,Esta relacionado con el mensaje de exito que hay que mostrar+ cant sintomas covid.
+        return false;//Esto hace que el formulario se envie.  //Aca la profe dijo que tiene que ir false, porque sino con el envío se refresca la pagina...,Esta relacionado con el mensaje de exito que hay que mostrar+ cant sintomas covid.
     }
 
-    
+
      
 }
