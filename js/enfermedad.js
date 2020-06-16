@@ -26,14 +26,16 @@ function validar(){
         error=true;
         mensajesError+="<p>El campo Telefono es obligatorio</p>";
     } 
-    
+
     // para los radio button, con name en comun
 
+    var contadorDeSintomas=0;
     var opciones=document.getElementsByName("fiebre");//Arrays con todos los elementos de name "fiebre"
     var seleccionado=false; // Si una variable esta seleccionado pasa de false a true.
     for(i in opciones){
         if(opciones[i].checked ){
-            seleccionado=true;       
+            seleccionado=true; 
+            contadorDeSintomas++;
         }      
     }
     if(!seleccionado){
@@ -46,6 +48,7 @@ function validar(){
     for(i in opciones){
         if(opciones[i].checked){
             seleccionado=true;
+            contadorDeSintomas++;
         }
     }
   
@@ -58,6 +61,7 @@ function validar(){
     for(i in opciones){
         if(opciones[i].checked){
             seleccionado=true;
+            contadorDeSintomas++;
         }
     }
     if(!seleccionado){
@@ -70,6 +74,7 @@ function validar(){
     for(i in opciones){
         if(opciones[i].checked){
             seleccionado=true;
+            contadorDeSintomas++;
         }
     }
     if(!seleccionado){
@@ -81,6 +86,7 @@ function validar(){
     for(i in opciones){
         if(opciones[i].checked){
             seleccionado=true;
+            contadorDeSintomas++;
         }
     }
     if(!seleccionado){
@@ -88,11 +94,10 @@ function validar(){
         mensajesError+="<p>Debe seleccionar respuesta a la pregunta tuviste dificultad al respirar </p>";
     }
         if(error){
-
         document.getElementById("mensajes").innerHTML=mensajesError;
         return false;
     }else{
-        //document.getElementById("mensajes").innerHTML=<p>Formulario enviado</p>;
+        document.getElementById("mensajes").innerHTML="<p>El formulario fue completado correctamente.</p>"+ contadorDeSintomas + "<p>sintomas de COVID-19 fueron registrados.</p>";
         return true;//Esto hace que el formulario se envie.  //Aca la profe dijo que tiene que ir false, porque sino con el envío se refresca la pagina...,Esta relacionado con el mensaje de exito que hay que mostrar+ cant sintomas covid.
     }
      
