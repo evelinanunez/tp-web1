@@ -1,6 +1,6 @@
 //alert("Estoy");
 function validar(){
-    debugger;
+
     var error=false;
     var mensajesError='';
     var nombre= document.getElementById("nombre").value;
@@ -25,53 +25,27 @@ function validar(){
     if(telefono==''){
         error=true;
         mensajesError+="<p>El campo Telefono es obligatorio</p>";
-    }
-
-
-    var opciones= document.getElementsByName("fiebre");
-    var seleccionado=false;
-    for(i in opciones){
-        if(opciones[i].checked){
-            seleccionado=true;
-        }else{
-            seleccionado=false;
-           
-        }
-        
-    }
-    if(!seleccionado){
-        error=true;
-        mensajesError+="<p>Debe seleccionar respuesta a la pregunta tuviste fiebre</p>";
-    }
-           
-        
+    } 
     
-
-
     // para los radio button, con name en comun
 
-    /*var opciones=document.getElementsByName("fiebre");//Arrays con todos los elementos de name "fiebre"
+    var opciones=document.getElementsByName("fiebre");//Arrays con todos los elementos de name "fiebre"
     var seleccionado=false; // Si una variable esta seleccionado pasa de false a true.
     for(i in opciones){
         if(opciones[i].checked ){
             seleccionado=true;       
-        }else {
-             seleccionado=false;
-         }
-        }
+        }      
+    }
     if(!seleccionado){
         error=true;
         mensajesError+="<p>Debe seleccionar respuesta a la pregunta tuviste fiebre</p>";
-    }*/
-    /*
-    var opciones=document.getElementsByName("dolorCabeza");
+    }
+        var opciones=document.getElementsByName("dolorCabeza");
     var seleccionado=false;
 
     for(i in opciones){
         if(opciones[i].checked){
             seleccionado=true;
-        }else{
-            seleccionado=false;
         }
     }
   
@@ -84,8 +58,6 @@ function validar(){
     for(i in opciones){
         if(opciones[i].checked){
             seleccionado=true;
-        }else{
-            seleccionado=false;
         }
     }
     if(!seleccionado){
@@ -98,8 +70,6 @@ function validar(){
     for(i in opciones){
         if(opciones[i].checked){
             seleccionado=true;
-        }else{
-            seleccionado=false
         }
     }
     if(!seleccionado){
@@ -111,16 +81,13 @@ function validar(){
     for(i in opciones){
         if(opciones[i].checked){
             seleccionado=true;
-        }else{
-            seleccionado=false
         }
     }
     if(!seleccionado){
         error=true;
         mensajesError+="<p>Debe seleccionar respuesta a la pregunta tuviste dificultad al respirar </p>";
     }
-    */
-    if(error){
+        if(error){
 
         document.getElementById("mensajes").innerHTML=mensajesError;
         return false;
