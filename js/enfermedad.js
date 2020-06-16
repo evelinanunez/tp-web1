@@ -35,22 +35,27 @@ function validar(){
     for(i in opciones){
         if(opciones[i].checked ){
             seleccionado=true; 
-            contadorDeSintomas++;
-        }      
+            contadorDeSintomas+=opciones[i].value == "si";
+        }     
     }
+   
+
     if(!seleccionado){
         error=true;
         mensajesError+="<p>Debe seleccionar respuesta a la pregunta tuviste fiebre</p>";
     }
+    
+
         var opciones=document.getElementsByName("dolorCabeza");
     var seleccionado=false;
 
     for(i in opciones){
-        if(opciones[i].checked){
+        if(opciones[i].checked ){
             seleccionado=true;
-            contadorDeSintomas++;
+           contadorDeSintomas+=opciones[i].value == "si";
         }
     }
+    
   
     if(!seleccionado){
         error=true;
@@ -58,12 +63,14 @@ function validar(){
     }
     var opciones=document.getElementsByName("tosPersistente");
     var seleccionado=false;
+
     for(i in opciones){
         if(opciones[i].checked){
             seleccionado=true;
-            contadorDeSintomas++;
+            contadorDeSintomas+=opciones[i].value == "si";
         }
     }
+
     if(!seleccionado){
         error=true;
         mensajesError+="<p>Debe seleccionar respuesta a la pregunta tuviste  tos persistente </p>";
@@ -72,11 +79,12 @@ function validar(){
     var opciones=document.getElementsByName("dolorGarganta");
     var seleccionado=false;
     for(i in opciones){
-        if(opciones[i].checked){
+        if(opciones[i].checked ){
             seleccionado=true;
-            contadorDeSintomas++;
+            contadorDeSintomas+=opciones[i].value == "si";
         }
     }
+    
     if(!seleccionado){
         error=true;
         mensajesError+="<p>Debe seleccionar respuesta a la pregunta tuviste Dolor de garganta</p>";
@@ -84,11 +92,13 @@ function validar(){
     var opciones=document.getElementsByName("dificultadRespirar");
     var seleccionado=false;
     for(i in opciones){
-        if(opciones[i].checked){
+        if(opciones[i].checked ){
             seleccionado=true;
-            contadorDeSintomas++;
+            contadorDeSintomas+=opciones[i].value == "si";
         }
     }
+    
+
     if(!seleccionado){
         error=true;
         mensajesError+="<p>Debe seleccionar respuesta a la pregunta tuviste dificultad al respirar </p>";
