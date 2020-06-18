@@ -1,6 +1,5 @@
 //alert("Estoy");
 function validar(){
-
     var error=false;
     var mensajesError='';
     var nombre= document.getElementById("nombre").value;
