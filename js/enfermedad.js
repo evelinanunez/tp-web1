@@ -1,6 +1,6 @@
 //alert("Estoy");
 function validar(){
-    debugger;
+
     var error=false;
     var mensajesError='';
     var nombre= document.getElementById("nombre").value;
@@ -25,55 +25,37 @@ function validar(){
     if(telefono==''){
         error=true;
         mensajesError+="<p>El campo Telefono es obligatorio</p>";
-    }
-
-
-    var opciones= document.getElementsByName("fiebre");
-    var seleccionado=false;
-    for(i in opciones){
-        if(opciones[i].checked){
-            seleccionado=true;
-        }else{
-            seleccionado=false;
-           
-        }
-        
-    }
-    if(!seleccionado){
-        error=true;
-        mensajesError+="<p>Debe seleccionar respuesta a la pregunta tuviste fiebre</p>";
-    }
-           
-        
-    
-
+    } 
 
     // para los radio button, con name en comun
 
-    /*var opciones=document.getElementsByName("fiebre");//Arrays con todos los elementos de name "fiebre"
+    var contadorDeSintomas=0;
+    var opciones=document.getElementsByName("fiebre");//Arrays con todos los elementos de name "fiebre"
     var seleccionado=false; // Si una variable esta seleccionado pasa de false a true.
     for(i in opciones){
         if(opciones[i].checked ){
-            seleccionado=true;       
-        }else {
-             seleccionado=false;
-         }
-        }
+            seleccionado=true; 
+            contadorDeSintomas+=opciones[i].value == "si";
+        }     
+    }
+   
+
     if(!seleccionado){
         error=true;
         mensajesError+="<p>Debe seleccionar respuesta a la pregunta tuviste fiebre</p>";
-    }*/
-    /*
-    var opciones=document.getElementsByName("dolorCabeza");
+    }
+    
+
+        var opciones=document.getElementsByName("dolorCabeza");
     var seleccionado=false;
 
     for(i in opciones){
-        if(opciones[i].checked){
+        if(opciones[i].checked ){
             seleccionado=true;
-        }else{
-            seleccionado=false;
+           contadorDeSintomas+=opciones[i].value == "si";
         }
     }
+    
   
     if(!seleccionado){
         error=true;
@@ -81,13 +63,14 @@ function validar(){
     }
     var opciones=document.getElementsByName("tosPersistente");
     var seleccionado=false;
+
     for(i in opciones){
         if(opciones[i].checked){
             seleccionado=true;
-        }else{
-            seleccionado=false;
+            contadorDeSintomas+=opciones[i].value == "si";
         }
     }
+
     if(!seleccionado){
         error=true;
         mensajesError+="<p>Debe seleccionar respuesta a la pregunta tuviste  tos persistente </p>";
@@ -96,12 +79,12 @@ function validar(){
     var opciones=document.getElementsByName("dolorGarganta");
     var seleccionado=false;
     for(i in opciones){
-        if(opciones[i].checked){
+        if(opciones[i].checked ){
             seleccionado=true;
-        }else{
-            seleccionado=false
+            contadorDeSintomas+=opciones[i].value == "si";
         }
     }
+    
     if(!seleccionado){
         error=true;
         mensajesError+="<p>Debe seleccionar respuesta a la pregunta tuviste Dolor de garganta</p>";
@@ -109,24 +92,25 @@ function validar(){
     var opciones=document.getElementsByName("dificultadRespirar");
     var seleccionado=false;
     for(i in opciones){
-        if(opciones[i].checked){
+        if(opciones[i].checked ){
             seleccionado=true;
-        }else{
-            seleccionado=false
+            contadorDeSintomas+=opciones[i].value == "si";
         }
     }
+    
+
     if(!seleccionado){
         error=true;
         mensajesError+="<p>Debe seleccionar respuesta a la pregunta tuviste dificultad al respirar </p>";
     }
-    */
-    if(error){
-
+        if(error){
         document.getElementById("mensajes").innerHTML=mensajesError;
         return false;
     }else{
-        //document.getElementById("mensajes").innerHTML=<p>Formulario enviado</p>;
-        return true;//Esto hace que el formulario se envie.  //Aca la profe dijo que tiene que ir false, porque sino con el envío se refresca la pagina...,Esta relacionado con el mensaje de exito que hay que mostrar+ cant sintomas covid.
+        document.getElementById("mensajes").innerHTML="<p>El formulario fue completado correctamente."+ contadorDeSintomas + " sintomas de COVID-19 fueron registrados.</p>";
+        return false;//Esto hace que el formulario se envie.  //Aca la profe dijo que tiene que ir false, porque sino con el envío se refresca la pagina...,Esta relacionado con el mensaje de exito que hay que mostrar+ cant sintomas covid.
     }
+
+
      
 }
