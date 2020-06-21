@@ -23,6 +23,7 @@ header{
     background-color: #F7FFF7;
 }
 h1{
+    font-size: 1.5em;
     text-align: center;
     padding: 0.5em;
     font-family: 'Chewy', cursive;
@@ -99,32 +100,16 @@ main{
 }
 
 /*Estilos del footer!!*/
-
 .estilosfooter{
     display: flex;
-    justify-content: space-around;
-    padding: 2em;
-}
-.menuinferior{
-    display: flex;
-    flex-direction: column;
-    line-height: 0.3em;
-    
-}
-.estilosfooter li{
-    list-style: none;
-}
-.menuinferior {
-    list-style: none;
 }
 .menuinferior a{
     text-decoration: none;
      display: block;
-     padding: 10px;
+     padding: 5px;
 }
-.estilosfooter div{
-    width: calc(33% - 1em); 
-    margin: 1.5em;
+.estilosfooter li{
+    list-style: none;
 }
 
 
@@ -162,15 +147,6 @@ main{
     text-decoration: none;
 }
 
-.contenedorredessociales{
-    display: flex;
-}
-.contenedorredessociales i{
-    display: inline-block;
-    font-size:  2.5em;
-    margin-right: 0.5em;
-    
-}
 .contenedorllamado{
     display: flex;
     justify-content: space-between;
@@ -226,6 +202,20 @@ main{
        display: inline-block;
         width: 30em;
     }
+    .menu a{
+        padding: 1em;
+    }
+    h1{
+        font-size: 2em;
+    }
+
+    .estilosfooter{
+        display: block;
+        text-align: center;
+    } 
+    .estilosfooter div{
+        padding-bottom: 0.5em;
+    }  
 
 }
 @media screen and (min-width:60em){
@@ -271,5 +261,37 @@ main{
     h1{
         font-size: 3em;
     }
+
+    /*Estilos footer*/
+    .estilosfooter{
+        display: flex;
+        justify-content: space-around;
+        padding: 0.5em;
+    }
+    .menuinferior{
+        display: flex;
+        flex-direction: column;
+        line-height: 0.3em; 
+    }
+    .menuinferior a{
+        padding: 1em;
+    }
+    .estilosfooter div{
+        width: calc(33% - 1em); 
+        margin: 1.5em;
+    }
     
+    .contenedorredessociales{
+    display: flex;
+    flex-wrap: no-wrap;
+    }
+    .contenedorredessociales a{
+        margin-right: 2em;
+    }
+
+    .contenedorredessociales i{
+    display: inline-block;
+    font-size:  2.5em;
+    /*margin-right: 0.5em; */ 
+    }
 }
