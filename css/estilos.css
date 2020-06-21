@@ -237,14 +237,7 @@ main{
     margin: auto;
     text-align: center;
 }
-.mapa{
-    margin: auto;
-    text-align: center;
-}
-.mapa iframe{
-    width: 100%;
-    height: 500px;
-}
+
 .error{
     color: #107FB5;
 }
