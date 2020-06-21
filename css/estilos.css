@@ -26,7 +26,6 @@ h1{
     text-align: center;
     padding: 0.5em;
     font-family: 'Chewy', cursive;
-    font-size: 3em;
     font-weight: 100;/*grosor*/
 }
 h2{
@@ -49,24 +48,6 @@ main{
 }
 
 /*Estilos del header*/
-/*
-.estilosheader{
-    display: flex;
-    justify-content: space-around;
-    align-items: center; para centrar los items del contenedor
-    padding: 10px;
-}
-
-.estilosheader img{
-   width: calc(40% - 2em);
-   box-sizing: border-box;
-    
-}
-*/
-/*.estilosheader{
-    display: inline;
-    justify-content: center;
-}*/
 .estilosheader img{
     max-width: 60%;
 
@@ -94,14 +75,6 @@ main{
 
 
 /*estilos del menu*/
-.menu{
-    display: flex;
-    justify-content:space-around;
-    border-bottom: 5px solid #000;
-    background-color: #107FB5 ;
-  
-}
-
 .menu li{
     list-style: none;
 }
@@ -112,12 +85,17 @@ main{
     font-size: 1.5em;
     margin: 0.5em;
     display: block;
-    padding: 0.5em;
+   /*padding: 0.5em;*/
     transition: background-color border-radius 1s;
 }
 .menu a:hover{
     background-color: #009ABC;
     border-radius: 20px;
+}
+.menu{ 
+    border-bottom: 5px solid #000;
+    background-color: #107FB5 ;
+    text-align: center;
 }
 
 /*Estilos del footer!!*/
@@ -170,26 +148,7 @@ main{
     max-height: 50%;
 
 }
-/*
-.contenedormenucentral h2{
-    line-height: 1.2em; interlineado
-    font-size: 1em;
-}
-*/
-/*
-.contenedormenucentral{
-    display: flex;
-    text-align: center;
-    justify-content:space-between;
-    align-items: flex-start;
-    padding: 1em;
-    
-}
-.contenedormenucentral div{
-    width: calc(33% - 1em);
 
-}
-*/
 .contenedormenucentral{
     margin: auto;
     text-align: center;;
@@ -300,6 +259,17 @@ main{
      .estilosheader div{
         margin: none;
         text-align:left;
+    }
+    /*Estilos del menu*/
+    .menu{
+        display: flex;
+        justify-content:space-around;
+    }
+    .menu a{
+        padding: 0.5em;
+    }
+    h1{
+        font-size: 3em;
     }
     
 }

@@ -16,24 +16,20 @@
     }
     .contenedormapa{
         display: flex;
-        justify-content: center;
+        justify-content: space-around;
     }
     .contenedormapa article{
         width: calc(45% - 0.1em);
     }
-    .detalleHospitales{
-        margin-left: 2em;
-    }
-    .ulmapa{
-        padding: 3em;
-        
-    }
+
+  
     .limapa{
         list-style: none;
         background-color: rgba(235, 221, 221, 0.878) ;
         padding: 1em;
         border-radius: 0.9em;
         width:25em;
+        margin-bottom: 2em;
     }
 } 
 
@@ -42,10 +38,14 @@
     .contenedormapa{
         display: flex;
         flex-direction: column;
+
     }
 
     .contenedormapa article{
         width: 100%;
     }
-   
+    .detalleHospitales{
+        display: flex;
+        flex-wrap:wrap;
+    }
 }
