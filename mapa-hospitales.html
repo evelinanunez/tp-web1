@@ -5,6 +5,8 @@
     <title>Mapa hospitales</title>
     <link rel="stylesheet" href="css/estilos.css">
     <link rel="stylesheet" href="css/mapa-hospitales.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/mapa-hospitales.js"></script>
 </head>
 <body>
    <datalist id="buscador"><!--no se como dejar una opcion marcada por defecto-->
@@ -49,9 +51,30 @@
     
                  <article >
                      <ul class="detalleHospitales">
-                        <a href=""><li class="limapa">Hospital Pirovano</li> </a>
-                        <a href=""><li class="limapa">Hospital general de Agudos Parmenio Piñero </li> </a>
-                        <a href=""><li class="limapa">Hotpital Donación Francisco Santojanni</li></a>
+                         <div class="divhospital">
+                             <a  id="abrir">Hospital Pirovano</a>
+                             <div class="popup">
+                                 <h2>Hospital Pirovano</h2>
+                                 <p>Dirección: sjsjsjj</p>
+                                 <a  id="cerrar">Cerrar</a> 
+                             </div>     
+                         </div>
+                         <div class="divhospital">
+                            <a  id="abrir1">Hospital general de Agudos Parmenio Piñero</a>
+                            <div class="popup1">
+                                <h2>Hospital general de Agudos Parmenio Piñero</h2>
+                                <p>Dirección: sjsjsjj</p>
+                                <a  id="cerrar1">Cerrar</a> 
+                            </div>     
+                        </div>
+                        <div class="divhospital">
+                            <a  id="abrir2">Hotpital Donación Francisco Santojanni</a>
+                            <div class="popup2">
+                                <h2>Hotpital Donación Francisco Santojanni</h2>
+                                <p>Dirección: sjsjsjj</p>
+                                <a  id="cerrar2">Cerrar</a> 
+                            </div>     
+                        </div>
                      </ul>                
                 </article>
             </section>
