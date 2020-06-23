@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <title>Mapa hospitales</title>
     <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/mapa-hospitales.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/mapa-hospitales.js"></script>
 </head>
 <body>
    <datalist id="buscador"><!--no se como dejar una opcion marcada por defecto-->
@@ -40,13 +43,41 @@
             </ul>
     </nav>
     <main>
-        
-            <h1>MAPA DE HOSPITALES</h1>
-            <article class="mapa">
-               <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d350847.7248750527!2d-58.580420923206944!3d-34.62350026172619!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sHOSPITALES!5e0!3m2!1ses-419!2sar!4v1590868090485!5m2!1ses-419!2sar"  frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe> 
-            </article>
-            
-       
+        <h1 class="h1mapa">MAPA DE HOSPITALES</h1>
+            <section class="contenedormapa">
+                 <article class="mapa">
+                     <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d350847.7248750527!2d-58.580420923206944!3d-34.62350026172619!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sHOSPITALES!5e0!3m2!1ses-419!2sar!4v1590868090485!5m2!1ses-419!2sar"  frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe> 
+                 </article>
+    
+                 <article >
+                     <ul class="detalleHospitales">
+                         <div class="divhospital">
+                             <a  id="abrir">Hospital Pirovano</a>
+                             <div class="popup">
+                                 <h2>Hospital Pirovano</h2>
+                                 <p>Dirección: sjsjsjj</p>
+                                 <a  id="cerrar">Cerrar</a> 
+                             </div>     
+                         </div>
+                         <div class="divhospital">
+                            <a  id="abrir1">Hospital general de Agudos Parmenio Piñero</a>
+                            <div class="popup1">
+                                <h2>Hospital general de Agudos Parmenio Piñero</h2>
+                                <p>Dirección: sjsjsjj</p>
+                                <a  id="cerrar1">Cerrar</a> 
+                            </div>     
+                        </div>
+                        <div class="divhospital">
+                            <a  id="abrir2">Hotpital Donación Francisco Santojanni</a>
+                            <div class="popup2">
+                                <h2>Hotpital Donación Francisco Santojanni</h2>
+                                <p>Dirección: sjsjsjj</p>
+                                <a  id="cerrar2">Cerrar</a> 
+                            </div>     
+                        </div>
+                     </ul>                
+                </article>
+            </section>
     </main>
     
     
